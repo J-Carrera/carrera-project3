@@ -1,23 +1,29 @@
 /* Global Styles */
-h1, body, html {
+body, html {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
     scroll-behavior: smooth;
   
-
-  .page {
+}
+  .page:not(#split-section)  {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #ffffff;
+    font-family: 'Times New Roman', sans-serif;
+    
   }
-  
+
+
+
+
+
   /* Title Page */
   #title-page {
-    background: url('brain.gif') no-repeat center center/cover;
+    background: url('Images/brain.gif') no-repeat center center/cover;
     position: relative;
   }
   
@@ -28,8 +34,14 @@ h1, body, html {
   }
   
   .title-content h1 {
-    font-size: 3em;
+    font-size: 3em; 
     animation: fadeIn 3s ease-in-out;
+    transition: opacity 0.3s ease; /* Smooth transition for fading */
+  }
+
+  .title-content:hover, .content:hover{
+    opacity: 0;
+    
   }
   
   .title-content p {
@@ -37,7 +49,96 @@ h1, body, html {
     font-size: 1.5em;
     animation: fadeIn 2s ease-in-out 1s;
   }
+
+  /* Section 1 */
+
+#split-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Top Half Background */
+.split.top {
+  flex: 1; /* Takes up half the section height */
+  background: url('Images/ReadingChild.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Bottom Half Background */
+.split.bottom {
+  flex: 1; /* Takes up the other half of the section */
+  background: url('Images/WalkingonPhone.webp') no-repeat center center;
+  background-size: cover;
+}
+
+/* Content Overlay */
+#split-section .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#split-section .content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#split-section .content p {
+  font-size: 1.2em;
+}
+
   
+
+
+     /* Section 2 */
+    
+.line{
+  height: 35px;
+  width: 750px;
+  line-height: 22px;
+  font-size: 15px;
+  color: black;
+  padding: 0 0 0 10px;
+  position: relative;
+  background-color:white;
+  border-radius: 50px;
+  z-index: -2;
+  font-weight: 900;
+  box-shadow: 0 2px 20px rgba(99, 59, 59, 0.5);
+}
+
+.line::after {
+  content: "";
+  background: linear-gradient(45deg,#bab6f9, #cadcfc);
+  height: 35px;
+  transition: .7s;
+  display: block;
+  width: 100%;
+  animation: animate 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+      
+}
+
+.line-1::after{
+  max-width: 7%;
+
+}
+
+.line-2::after{
+  max-width: 70%;
+
+}
 
 
   /* Content Sections */
@@ -69,4 +170,14 @@ h1, body, html {
       opacity: 1;
     }
   }
+  
+@keyframes animate{
+  0% {
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+    }
+
   
