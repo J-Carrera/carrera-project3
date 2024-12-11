@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Has Social Media Stolen ?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Title Page -->
+  <section id="title-page" class="page">
+    <div class="title-content">
+      <h1>How Much Has Social Media Stolen From Our Lives?</h1>
+      <p>John C. Carrera</p>
+    </div>
+  </section>
+
+  <!-- Section 1 -->
+  <section id="split-section" class="page">
+    <div class="split top"></div>
+    <div class="split bottom"></div>
+    <div class="content">
+      <h2>Why I Care</h2>
+      <p>The inspiration to investigate the extent to which social media and the internet have taken from our human
+        experience began after reflecting on the aspects of my life and the challenges I face. As a young adult in
+        today’s modern society, I have experienced the ubiquity of technology and its effects (both good and bad)
+        throughout my entire life. The constant presence of technology in my life has led to a negative and pervasive
+        consequence: dependence. I feel a constant need to check my phone for new notifications or to read the latest
+        interesting story that was just published. So much of my free time has been consumed by social media and the
+        internet, with countless hours wasted scrolling through posts that I will forget within minutes. While this
+        dependence can be explained as a lack of control or discipline, this explanation, though partly true, requires
+        further exploration, especially when so many young adults face similar obstacles. We must gain a deeper
+        understanding of how these devices, which were meant to supplement our lives, have instead taken them away.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="page">
+    <div class="content-section2">
+      <img class="chart1" src= "./Images/z.jpg" alt = "Graph"/> <!--1-->
+      <img class="chart2" src= "./Images/a.jpg" alt = "Graph"/> <!--2-->
+      <img class="chart3" src= "./Images/x.jpg" alt = "Graph"/> <!--3-->
+      <img class="chart4" src= "./Images/y.jpg" alt = "Graph"/> <!--4-->
+      <img class="chart5" src="./Images/Social Networking Use Has Shot Up in Past Decade .jpg"/><!--5-->
+    </div>
+    <p class="description">Social media usage trends over the past decade have shown a significant increase, as illustrated in the charts above.</p> 
+  </section>
+
+  <!-- Section 3 -->
+  <section class="page">
+    <div class="content">
+      <h2>Where Do We Go From Here?</h2>
+      <p>To reclaim our time, we must...</p>
+    </div>
+  </section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>

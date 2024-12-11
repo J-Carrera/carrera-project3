@@ -1,5 +1,5 @@
 document.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll(".page");
+    const sections = document.querySelectorAll(".page", ".page-header");
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom >= 0) {
