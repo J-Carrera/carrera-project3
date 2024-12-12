@@ -10,4 +10,11 @@ document.addEventListener("scroll", () => {
       }
     });
   });
-  
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav');
+    if(window.scrollY > 100) {
+      navbar.classList.add('active');
+    } else {
+      navbar.classList.remove('active');
+    }
+  });

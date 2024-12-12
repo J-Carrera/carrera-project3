@@ -8,7 +8,7 @@ html {
   background: url('Images/motherboardbackground.jpg');
 }
 
-.page:not(#split-section){
+.page:not(#split-section) {
   height: 125vh;
   display: flex;
   align-items: center;
@@ -18,16 +18,75 @@ html {
   font-family: 'Times New Roman', sans-serif;
 }
 
+ /* Headers */
+
+ /* General Fancy Header */
+
+ .page-header {
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+
+.page-header  {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+
+.fancy-header {
+  font-family: 'Georgia', serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white; /* Golden highlight */
+  background: linear-gradient(90deg, #000, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+ /* Section-specific Styling */
 .page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 5px solid #FFD700;
+  margin-top: 100px;
+}
+
+.page-header p {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #f8f8f8;
+}
+
+/* .page-header {
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  font-family: 'Times New Roman', sans-serif;
-  
-}
+  font-family: 'Times New Roman', sans-serif; */
+
+
+
+
 
 /* Title Page */
 #title-page {
@@ -41,20 +100,44 @@ html {
   border-radius: 10px;
 }
 
+/* Title Content Animation */
 .title-content h1 {
+  font-size: 4em;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: fadeInTitle 2.5s ease-in-out;
+}
+
+.title-content p {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #FFF;
+  animation: fadeInTitle 2.5s ease-in-out 1s;
+}
+
+
+/* .title-content h1 {
   font-size: 3em;
   animation: fadeIn 3s ease-in-out;
-  transition: opacity 0.3s ease; /* Smooth transition for fading */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for fading */
 }
 
 .title-content p {
   margin-top: 10px;
   font-size: 1.5em;
   animation: fadeIn 2s ease-in-out 1s;
+} */
+
+.content:hover  {
+  opacity: 0;
 }
 
-.content:hover {
+.content-section5:hover {
   opacity: 0;
+  
 }
 
 
@@ -88,7 +171,8 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background */
+  background: rgba(0, 0, 0, 0.6);
+  /* Optional: semi-transparent background */
   padding: 20px;
   border-radius: 10px;
 }
@@ -109,13 +193,15 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Spacing between rows */
+  gap: 20px;
+  /* Spacing between rows */
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Spacing between images in a row */
+  gap: 15px;
+  /* Spacing between images in a row */
 }
 
 .chart {
@@ -127,16 +213,19 @@ html {
 }
 
 .chart:hover {
-  transform: scale(1.2); /* Zoom in by 20% */
+  transform: scale(1.2);
+  /* Zoom in by 20% */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .description-users {
-  margin-top: 20px; /* Space between images and paragraph */
+  margin-top: 20px;
+  /* Space between images and paragraph */
   text-align: center;
   font-size: 14px;
   color: black;
-  width: 80%; /* Center and limit paragraph width */
+  width: 80%;
+  /* Center and limit paragraph width */
   margin-left: auto;
   margin-right: auto;
   margin-left: 60px;
@@ -144,6 +233,12 @@ html {
   background: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 10px;
+}
+
+.description-users:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  
 }
 
 
@@ -162,15 +257,24 @@ html {
 
 .content-section3 {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center content horizontally */
-  gap: 20px; /* Add space between the two sections (50px) */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center content horizontally */
+  gap: 20px;
+  /* Add space between the two sections (50px) */
   padding: 20px;
- 
+
   /* background-color: rgba(0, 0, 0, 0.8); */
   color: white;
+  
+  
 }
 
+.content-section3:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
 
 
 
@@ -189,17 +293,18 @@ html {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gloria:hover {
+/* .gloria:hover {
   transform: scale(1.1);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .right-column {
   flex: 2;
   max-width: 600px;
 }
 
-.gloria-intro, .study {
+.gloria-intro,
+.study {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -211,30 +316,40 @@ html {
 
 /* Section 4 */
 #section4 .container {
-  max-width: 800px; /* Adjust as necessary for your layout */
-  margin: auto; /* Center the container on the page */
+  max-width: 800px;
+  color: black;
+  /* Adjust as necessary for your layout */
+  margin: auto;
+  /* Center the container on the page */
   padding: 20px;
-  margin-left: 50px; /* 50px from the left end of the page */
+  margin-left: 50px;
+  /* 50px from the left end of the page */
   box-sizing: border-box;
 }
 
 #section4 .image-text {
   display: flex;
-  align-items: center; /* Aligns the image and text vertically */
-  margin-bottom: 40px; /* Space between each image-text pair */
-  
+  align-items: center;
+  /* Aligns the image and text vertically */
+  margin-bottom: 40px;
+  /* Space between each image-text pair */
+
 }
 
 #section4 .image-text img {
-  width: 30%; /* Adjust based on your preference */
+  width: 30%;
+  /* Adjust based on your preference */
   max-width: 200px;
   height: auto;
-  margin-right: 20px; /* Space between the image and the text */
+  margin-right: 20px;
+  /* Space between the image and the text */
 }
 
 #section4 .image-text p {
-  flex: 1; /* Allows the paragraph to take up the remaining space */
-  text-align: justify; /* Ensures the text is evenly justified */
+  flex: 1;
+  /* Allows the paragraph to take up the remaining space */
+  text-align: justify;
+  /* Ensures the text is evenly justified */
   margin: 0;
 }
 
@@ -244,52 +359,87 @@ html {
 }
 
 .youtube-video {
-  position: absolute; /* Keep the video fixed in place */
-  top: 50%; /* Adjust as needed */
-  right: 8%; /* Adjust distance from the right edge */
-  transform: translateY(-50%); /* Center the video vertically */
-  width: 400px; /* Standard YouTube width */
-  max-width: 100%; /* Make responsive */
+  position: absolute;
+  /* Keep the video fixed in place */
+  top: 50%;
+  /* Adjust as needed */
+  right: 8%;
+  /* Adjust distance from the right edge */
+  transform: translateY(-50%);
+  /* Center the video vertically */
+  width: 400px;
+  /* Standard YouTube width */
+  max-width: 100%;
+  /* Make responsive */
 }
 
 .youtube-video iframe {
   width: 100%;
   height: 400px;
-  border: 5px solid grey; /* Optional: Add border for aesthetics */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+  border: 5px solid black;
+  /* Optional: Add border for aesthetics */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  /* Optional: Add shadow */
+}
+
+/* Section 5 */
+
+
+
+.content-section5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+  /* Optional: semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+
 }
 
 
 /* Page-specific Backgrounds */
-.page:nth-child(2) {
+/* .page-header:nth-child(2) {
+  background: #1b2a3a;
+} */
+
+.page:nth-child(3) {
   background: #2c3e50;
 }
 
-.page:nth-child(3) {
+.page:nth-child(4) {
   background: #0b1a5d;
 }
 
-.page-header:nth-child(4) {
-  background: rgb(67, 84, 37) ;
+/* .page-header:nth-child(5) {
+  background: rgb(67, 84, 37);
+} */
+
+.page:nth-child(6) {
+  background: darkolivegreen;
 }
 
-.page:nth-child(5) {
-  background: darkolivegreen ;
+/* .page-header:nth-child(7) {
+  background: rgb(67, 84, 37);
+} */
+
+.page:nth-child(8) {
+  /* background: #CC5500; */
+  background: #D2B48C;
 }
 
-.page-header:nth-child(6) {
-  background: rgb(67, 84, 37) ;
-}
-
-.page:nth-child(7) {
-  background: black;
+.page:nth-child(9) {
+  background: url('Images/freedom.jpg') no-repeat center center/cover;
 }
 
 
 
 
 /*Animations */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -297,5 +447,26 @@ html {
   to {
     opacity: 1;
   }
+} */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
